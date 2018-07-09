@@ -12,5 +12,5 @@ RUN chmod +x /usr/local/bin/dumb-init
 EXPOSE 5060 5061 5080 5081 8443
 VOLUME /etc/repro
 
-ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
+#ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
 CMD ["/usr/sbin/repro", "/etc/repro/repro.config"]
