@@ -13,4 +13,4 @@
  13 VOLUME /etc/repro
  14
  15 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
- 16 CMD ["/usr/sbin/repro"]
+ 16 CMD ["/usr/sbin/repro", "/etc/repro/repro.config"]
