@@ -10,7 +10,7 @@ RUN wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/
 RUN chmod +x /usr/local/bin/dumb-init
 
 RUN sed -i 's/Daemonize = true/Daemonize = false/' /etc/repro/repro.config \
-    sed -i 's/Database1Path = \/var\/lib\/repro/Database1Path = \/etc\/repro\/db/' /etc/repro/repro.config
+    && sed -i 's/Database1Path = \/var\/lib\/repro/Database1Path = \/etc\/repro\/db/' /etc/repro/repro.config
 
 EXPOSE 5060 5061 5080 5081 8443
 VOLUME /etc/repro
